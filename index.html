@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita Aveiro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="mensajeBienvenida" class="bienvenida"></div>
+
+    <header>
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo Visita Aveiro">
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#carrusel">Inicio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <a href="#" onclick="abrirRed('Facebook')"><img src="imagenes/facebook.png" alt="Facebook"></a>
+            <a href="#" onclick="abrirRed('Instagram')"><img src="imagenes/instagram.png" alt="Instagram"></a>
+            <a href="#" onclick="abrirRed('TikTok')"><img src="imagenes/tiktok.png" alt="TikTok"></a>
+        </div>
+    </header>
+
+   <section id="carrusel" class="carrusel">
+        <button class="btn prev" onclick="moverSlide(-1)">&#10094;</button>
+        <div class="slide-container">
+            <img class="slide active" src="imagenes/aveiro1.png" alt="Aveiro 1">
+            <img class="slide" src="imagenes/aveiro2.png" alt="Aveiro 2">
+            <img class="slide" src="imagenes/aveiro3.png" alt="Aveiro 3">
+            <img class="slide" src="imagenes/aveiro4.png" alt="Aveiro 4">
+
+            <div class="carrusel-texto">
+            <h1>VISITA AVEIRO</h1>
+            <p>Una vista inolvidable entre el mar y el cielo</p>
+            </div>
+        </div>
+        <button class="btn next" onclick="moverSlide(1)">&#10095;</button>
+    </section>
+
+    <section class="galeria">
+    <div class="imagen" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+        <img src="imagenes/moliceiros.jpg" alt="Canales y Moliceiros">
+        <div class="descripcion">Paseo en moliceiros por los canales de Aveiro</div>
+    </div>
+
+    <div class="imagen" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+        <img src="imagenes/gastronomia.jpg" alt="Platos típicos de Aveiro">
+        <div class="descripcion">Delicias gastronómicas tradicionales de Aveiro</div>
+    </div>
+
+    <div class="imagen" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+        <img src="imagenes/costa_nova.jpg" alt="Casas de Costa Nova">
+        <div class="descripcion">Casas de colores en la playa de Costa Nova</div>
+    </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2025 Jorge Luis Berrio Garcia | Todos los derechos reservados</p>
+        <a href="#" class="whatsapp" onclick="abrirWhatsApp()">
+            <img src="imagenes/whatsapp.png" alt="WhatsApp">
+        </a>
+    </footer>
+    <script src="script.js"></script>
+    <button class="pregunta" onclick="mostrarMensaje()">¿Te gustaría visitar Aveiro?</button>
+
+</body>
+</html>
